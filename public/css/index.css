@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     font-family: "Poppins", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     width: 95vw;
@@ -21,20 +22,50 @@ body {
     transition: all .3s ease;
 }
 
-.btn:hover{
+.btn:hover, .btn_modal:hover{
     background-color: #fff;
     color: #0088cc;
 
 }
+
+.btn2{
+    background-color: red;
+    color: #fff;
+    padding: 5px 8px;
+    border: 1px solid red;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    margin-left: 70%;
+}
+
+.btn2:hover{
+    background-color: #fff;
+    color: red;
+
+}
+
+.btn3{
+    background-color: #0088cc;
+    color: #fff;
+    padding: 5px 8px;
+    border: 1px solid #0088cc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
 #btn_cancelar{
     text-decoration: none;
 }
 
 .menu{
     display: flex;
-    width: 100vw;
+    width: auto;
     height: 10vh;
-    background-color: #74a4f4;
+    background-color: #21aef5;
     align-items:center;
     box-shadow: 0px 3px 4px grey;
 }
@@ -61,14 +92,22 @@ body {
     color: #696969;
 }
 
+#sair{
+    justify-content: flex-end;
+}
 
 #title{
     align-items: center;
     font-size: 30px;
 }
 
+#title:hover{
+    color: rgb(54, 54, 54);
+}
+
 .opcoes{
-    justify-content: center;
+    width: 60%;
+    display: flex;
 }
 
 #content{
@@ -109,11 +148,39 @@ body {
     display: flex;
 }
 
-.cor_lateral{
+#cor_lateral1{
     width: 1vw;
     height: 25vh;
     border-radius: 14px 0px 0px 14px;
     background-color: #79a5f1;
+}
+
+#cor_lateral2{
+    width: 1vw;
+    height: 25vh;
+    border-radius: 14px 0px 0px 14px;
+    background-color: orange;
+}
+
+#cor_lateral3{
+    width: 1vw;
+    height: 25vh;
+    border-radius: 14px 0px 0px 14px;
+    background-color: rgb(255, 255, 107);
+}
+
+#cor_lateral4{
+    width: 1vw;
+    height: 25vh;
+    border-radius: 14px 0px 0px 14px;
+    background-color: #21aef5;
+}
+
+#cor_lateral5{
+    width: 1vw;
+    height: 25vh;
+    border-radius: 14px 0px 0px 14px;
+    background-color: green;
 }
 
 .card:hover{
@@ -140,7 +207,7 @@ body {
 
 .card-title{
     width: 10vw;
-    text-align: center;
+    text-align: center;xt
 }
 
 .logo_card{
@@ -162,15 +229,24 @@ body {
 
 }
 
-.space_buttons_menu{
-    width: 11%;
-    text-align: center;
+#create_workspace{
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 /* Modais */
 #modal, #modal2{
-    width: 30%;
-    height: 70%;
+    width: 35%;
+    height: 80%;
+    border: none;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    border-radius: 1%;
+    text-align: center;
+}
+
+#modal_workspace{
+    width: 40%;
+    height: 75%;
     border: none;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
     border-radius: 1%;
@@ -194,8 +270,8 @@ body {
 }
 
 .espace_label{
-    margin-top: 9%;
-    text-align: left;
+    display: flex;
+    margin-top: 7%;
     padding: 5px;
 }
 
@@ -209,19 +285,54 @@ body {
     margin-right: 4%;
 }
 
-#title_modal, #select_modal, #user_selected{
+.selects{
+    display: flex;
+    width: 8vw;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.select_modal{
+    border: 0.5px solid grey;
+    width: 100%;
+}
+
+.select_modal:hover{
+    background-color: #fcfcfc;
+}
+
+.selectModal{
     height: 3vh;
+
 }
 
 #title_modal:focus{
     border-color: #74a4f4;
 }
+
+#title_modal{
+    height: 3vh;
+}
+
+#description_modal{
+    height: 20vh;
+}
+
 a{
     color: black;
     text-decoration: none;
 }
 
-
+.btn_modal{
+    background-color: #0088cc;
+    color: #fff;
+    padding: 8px 11px;
+    border: 1px solid #0088cc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+}
 
 /* Card details */
 
@@ -234,20 +345,20 @@ a{
 #firts_content{
     width: 55vw;
     height: 80vh;
-    border: 1px solid red;
+   /* border: 1px solid red; */
 }
 
 #second_content{
     display: flex;
     width: 25vw;
     height: 80vh;
-    border: 1px solid blue;
+   /* border: 1px solid blue; */
     flex-direction: row; /* row é padrão */
     justify-content: center;
 }
 
 #title_details{
-    width: 54vw;
+    width: 55vw;
     height: 5vh;
     font-size: 25px;
     border: none;
@@ -255,6 +366,8 @@ a{
 
 #text-span{
     margin-top: 3%;
+    border-left: 5px solid #0088cc;
+
 }
 
 #textarea{
@@ -263,17 +376,32 @@ a{
     border: none;
     text-align: left;
     font-size: 1.5em;
+    padding-top: 2%;
+    background-color: rgb(248, 248, 248);
+    border-radius: 5px;
 }
 #menu_lateral{
+    margin-right: 2%;
     margin-top: 10%;
     width: 20vw;
     height: 60vh;
-    border: 1px solid green;
+   /* border: 1px solid green; */
     
 }
 
 fieldset, #delete{
     margin-top: 5%;
+}
+
+.msg{
+    margin-top: 0;
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
 }
 
 #author, #type, #size_task, #requester{
@@ -283,11 +411,11 @@ fieldset, #delete{
 #option_menu{
     width: 15vw;
     height: 5vh;
-    border: 1px solid yellow;
+   /* border: 1px solid yellow; */
 }
 
 select{
-    width: 8vw;
+    width: 5vw;
     height: 4vh;
     font-size: 15px;
     color: #3f3e3e;
@@ -297,7 +425,45 @@ select{
     background-color: transparent;
 }
 
-#option_menu:hover, #author:hover{
-    background-color: rgb(211, 210, 210);
+#option_menu:hover, #author:hover, #title_details:hover, #textarea:hover{
+    background-color: rgb(238, 237, 237);
+    border-radius: 5px;
 }
 
+#buttons{
+    margin-top: 7%;
+}
+
+#deletar{
+    margin-left: 70%;
+}
+
+#buttons{
+   /* border: 1px solid green; */
+    display:flex;
+}
+
+.btn_status{
+    background-color: white;
+    color: black;
+    
+    
+}
+
+.btn_status:hover{
+    color: black;
+}
+
+#status{
+    overflow: hidden;
+}
+
+#status{
+   /* border: 1px solid orange; */
+    width: 20vw;
+    height: 5vh;
+}
+
+#status_id{
+    width: 8vw;
+}

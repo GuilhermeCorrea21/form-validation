@@ -1,0 +1,129 @@
+body{
+    margin: 0px;
+    background-color: #21aef5;
+    font-family: "Poppins", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#back{
+    text-align: left;
+    width: 10px;
+    padding: 2% 6%;
+    text-decoration: none;
+    color: rgb(248, 149, 149);
+}
+
+#back:hover{
+    color: rgb(245, 109, 109);
+}
+
+h2{
+    color: #474747;
+}
+
+img{
+    width: 10vw;
+    height: 8vw;
+}
+
+#email{
+    margin-top: 3%;
+}
+
+#password, #button{
+    margin-top: 8%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 86vh;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+input{
+    width: 80%;
+    height: 5vh;
+    border-radius: 40px;
+    padding-left: 2%;
+    font-size: 18px;
+    border: 2px solid #0088cc;
+}
+
+input::placeholder{
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+#enter{
+    background-color: #0088cc;
+    color: #fff;
+    padding: 8px 11px;
+    border: 1px solid #0088cc;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    width: 200px;
+    height: 40px;
+}
+
+#register{
+    background-color: green;
+    color: #fff;
+    padding: 5px 8px;
+    border: 1px solid green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+}
+
+#btn-register{
+    background-color: green;
+    color: #fff;
+    padding: 11px 70px;
+    border: 1px solid green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+#enter:hover{
+    background-color: #fff;
+    color: #0088cc;
+}
+
+#register:hover, #btn-register:hover{
+    background-color: #fff;
+    color:green;
+}
+
+.msg{
+    margin-top: 0;
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,6 +1,9 @@
 @extends('layouts.header')
-@section('title', 'Details')
+@section('title', 'Quadro Kanban')
 @section('content')
+@if (session('msg'))
+    <p class="msg">{{ session('msg') }}</p>
+@endif
 <form action="/update/{{ $card->id }}" method="POST">
     @csrf
     @method('PUT')
@@ -8,20 +11,22 @@
     <div id="firts_content">
         <input type="text" id="title_details" name="title" value="{{ $card->title }}">
         <hr>
-        <p id="text-span">Descrição</p>
+        <p id="text-span"> Descrição</p>
         <textarea id="textarea" name="description">
             {{ $card->description }}
         </textarea>
     </div>
     <div id="second_content">
         <div id="menu_lateral">
-            <select name="status_id">
-            <option value="1">Backlog</option>
-            <option value="2">Em analise</option>
-            <option value="3">Em desenvolvimento</option>
-            <option value="4">Em teste</option>
-            <option value="5">Finalizado</option>
-            </select>
+            <div id="status">
+                <select name="status_id" id="status_id" class="btn3">
+                    <option value="1" class="btn_status" {{ $card->status_id == 1 ? "selected='selected'" : "" }}>Backlog</option>
+                    <option value="2" class="btn_status"  {{ $card->status_id == 2 ? "selected='selected'" : "" }}>Em analise</option>
+                    <option value="3" class="btn_status"  {{ $card->status_id == 3 ? "selected='selected'" : "" }}>Em desenvolvimento</option>
+                    <option value="4" class="btn_status"  {{ $card->status_id == 4 ? "selected='selected'" : "" }}>Em teste</option>
+                    <option value="5" class="btn_status"  {{ $card->status_id == 5 ? "selected='selected'" : "" }}>Finalizado</option>
+                </select>
+            </div>    
                 <fieldset>
                     <legend>Informações</legend>
 
@@ -67,11 +72,17 @@
                     <option value="teste">Alta</option>
                 </select>
                 </div>
-
                 </fieldset>
 
-                <input type="submit" value="Atualizar" class="btn">
+                <div id="buttons">
+                <input type="submit" value="Atualizar" class="btn" id="atualizar">
             </form>
+            <form action="/delete/{{ $card->id }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Deletar" class="btn2" id="deletar">
+            </form>
+                </div>
         </div>
     </div>
 </div>
